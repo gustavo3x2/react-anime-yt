@@ -1,3 +1,6 @@
+import React from 'react';
+import AnimeCard from './AnimeCard';
+
 function MainContent(props) {
     return (
         <main>
@@ -9,9 +12,7 @@ function MainContent(props) {
             </div>
             <div className="anime-list">
                 {props.animeList.map(anime => (
-                    <div className="anime-card">
-                        {anime.title}
-                    </div>
+                    <AnimeCard anime={anime} key={anime.mal_id} />
                 ))}
             </div>
         </main>
